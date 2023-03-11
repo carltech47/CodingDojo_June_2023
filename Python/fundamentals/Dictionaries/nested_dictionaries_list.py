@@ -1,8 +1,7 @@
-### Dated 11/2022
+### Dated 3_11_2023
 
 # 1) Update Values in Dictionaries and Lists
 # 
-
 x = [ [5,2,3], [10,8,9] ] 
 students = [
      {'first_name':  'Michael', 'last_name' : 'Jordan'},
@@ -13,7 +12,7 @@ sports_directory = {
     'soccer' : ['Messi', 'Ronaldo', 'Rooney']
 }
 z = [ {'x': 10, 'y': 20} ]
-
+print(f"\n")
 print("----------------Start Number 1----------------")
 print("This is the start of the x list")
 print("======================")
@@ -43,7 +42,7 @@ print(sports_directory["soccer"][0])
 sports_directory["soccer"][0] = "Andres"
 print(sports_directory)
 
-
+print(f"\n")
 print("----------------Start Number 4----------------")
 print("This is the start of the z list")
 print("======================")
