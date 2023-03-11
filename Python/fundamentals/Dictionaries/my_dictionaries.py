@@ -15,3 +15,8 @@ capitals["fra"] = "Paris"
 # print the capitals dictionary to see how it changed!
 print([capitals])
 print(capitals["fra"])
+
+
+print(person_2["first_name"])
+
+print(person["last_name"])
