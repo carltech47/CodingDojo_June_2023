@@ -24,7 +24,7 @@ name = "Abrialla"
 
 def ret_number_vowels(name):
     for i in range(0, len(name), 1):
-        if i == ["a"]:
+        if i == "a":
             print("This name contains an", i)
         else:
             print(name[i])
