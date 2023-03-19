@@ -49,4 +49,6 @@ user_2.spend_points(80)
 user_1.display_info()
 user_2.display_info()
 user_3.display_info()
-user_3.display_info()
+user_3.display_info().first_name
+user_1.display_info().enroll().spend_points(50).display_info()
+user_2.enroll().spend_points(80).display_info()
