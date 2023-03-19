@@ -48,53 +48,32 @@ class BankAccount:
 # BankAccount.print_all_accounts()
 
 
+"""
+Create a User class with an __init__ method
+
+Add a make_deposit method to the User class that calls on it's bank account's instance methods.
+
+Add a make_withdrawal method to the User class that calls on it's bank account's instance methods.
+
+Add a display_user_balance method to the User class that displays user's account balance
+
+SENSEI BONUS: Allow a user to have multiple accounts; update methods so the user has to specify which account they are withdrawing or depositing to
+
+SENPAI BONUS: Add a transfer_money(self, amount, other_user) method to the user class that takes an amount and a different User instance, and transfers money from the user's account into another user's account.
+
+"""
+
 class User:
-    is_rewards_member = False
-    gold_card_points = 0
-    def __init__(self, first_name, last_name, email, age, member_status, gold_card_points):
-        self.first_name = first_name
-        self.last_name = last_name
+    def __init__(self, name, email):
+        self.name = name
         self.email = email
-        self.age = age
-        self.member_status = member_status
-        self.account = BankAccount(0.02, 100)
-
-    def display_info(self):
-        print(f"First Name: {self.first_name}")
-        print(f"Last Name: {self.last_name}")
-        print(f"Email: {self.email}")
-        print(f"Age: {self.age}")
-        print(f"Rewards Member: {self.is_rewards_member}")
-        print(f"Spend Points: {self.gold_card_points}")
-        print("\n")
-        return self
-
+        self.account = BankAccount(int_rate=0.02, balance=0)
+    
+    # other methods
+    
     def make_deposit(self, dep_amount):
         self.account.deposit(dep_amount)
         print(f"This is your account balance: {self.account.balance}")
-        return self
-
-    def make_withdrawal(self, withdrawal_amount):
-        self.account.withdrawal(withdrawal_amount)
-        print(f"After your withdrawal, Your account balance is: {self.account.balance}")
-        return self
-
-    def display_user_balance(self, account_balance):
-        self.account.balance(account_balance)
-        print(f"This is your account balance: {self.account.balance}")
-        return self
-
-    def enroll(self):
-        self.member_status = True
-        print(self.member_status)
-        self.gold_card_points = 200
-        print(self.gold_card_points)
-        print(f"\n")
-        return self
-    
-    def spend_points(self, amount):
-        print(self.gold_card_points-amount)
-        print(f"\n")
         return self
 
 # display_info(self) - Have this method print all of the users' details on separate lines.
@@ -103,17 +82,17 @@ class User:
 
 
 
-user_1 = User('Bob', 'Smith', 'bs@gmail.com', 41, False, 0)
+#user_1 = User('Bob', 'Smith', 'bs@gmail.com', 41, False, 0)
 # user_2 = User('Melissa', 'Wilson', 'mw@gmail.com', 37, False, 0)
 # user_3 = User('Abby', 'Johnson', 'aj@gmail.com', 16, False, 0)
 # user_4 = User('Lilly', 'Allen', 'la@gmail.com', 10, False, 0)
 
 
-user_1.display_info().enroll().spend_points(50)
+#user_1.display_info().enroll().spend_points(50)
 # user_2.display_info().enroll().spend_points(80)
 # user_3.display_info().enroll().spend_points(0)
 # user_3.display_info().enroll().spend_points(0)
 
-user_1.make_deposit(2000)
+#user_1.make_deposit(2000)
 
 
