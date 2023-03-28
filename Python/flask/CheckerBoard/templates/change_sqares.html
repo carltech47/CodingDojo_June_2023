@@ -1,0 +1,74 @@
+<!-- By This is awesome times 2!! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkerboard Assignment - change the number of squares based on the route</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .color1 {
+            background-color: red;
+            width: 30px;
+            height: 30px;
+        }
+        .color2 {
+            background-color: black;
+            width: 30px;
+            height: 30px;
+        }
+        td {
+            margin: 0px;
+        }
+        tr {
+            margin: 0px
+        }
+        table { 
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+    
+    </style>
+</head>
+<body>
+    <table>
+        {% for x in range(0, rows): %}
+            {% if x % 2 != 0: %}
+            <tr>
+                {% for y in range(0, columns): %}
+                    {% if y % 2 != 0: %}
+                    <td class="color1"></td>
+                    {% endif %}
+                    {% if y % 2 == 0: %}
+                    <td class="color2"></td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endif %}
+
+            {% if x % 2 == 0: %}
+            <tr>
+                {% for y in range(0, columns): %}
+                    {% if y % 2 != 0: %}
+                    <td class="color2"></td>
+                    {% endif %}
+                    {% if y % 2 == 0: %}
+                    <td class="color1"></td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+<!-- # Your program should have the following output:
+# http://localhost:5000 - should display 8 by 8 checkerboard
+# http://localhost:5000/(x)/(y) - should display x by y checkerboard.  
+For example, http://localhost:5000/10/10 should display 10 by 10 checkerboard. -->
