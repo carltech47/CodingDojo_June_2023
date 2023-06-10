@@ -118,22 +118,26 @@ dojo = {
     'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
 
+'''
 number_of_locations = len(dojo["locations"])
 print(f" {number_of_locations} LOCATIONS")
-
+'''
 
 def printinfo():
+    print("LOCATIONS")
     for x in range(len(dojo["locations"])):
-        print(dojo["locations"])
+        print(dojo["locations"][x])
 printinfo()
 print(f"\n")
 
-
+'''
 number_of_instructors = len(dojo["instructors"])
 print(f" {number_of_instructors} INSTRUCTORS")
+'''
 
 def printinfo2():
+    print("INSTRUCTORS")
     for x in range(len(dojo["instructors"])):
-        print(dojo["instructors"])
+        print(dojo["instructors"][x])
 printinfo2()
 print(f"\n")
